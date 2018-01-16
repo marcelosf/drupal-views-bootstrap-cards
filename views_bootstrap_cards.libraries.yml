@@ -1,0 +1,4 @@
+cards:
+  css:
+    component:
+      css/views_bootstrap_cards.theme.css: {}

@@ -1,0 +1,11 @@
+name: Views Bootstrap Cards
+type: module
+description: 'Views Twitter Bootstrap Card Component.'
+package: Views
+# core: 8.x
+dependencies:
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2017-10-04
+core: '8.x'
+project: 'views_bootstrap_cards'

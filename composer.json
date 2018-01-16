@@ -1,0 +1,7 @@
+{
+  "name": "drupal/views_bootstrap_cards",
+  "type": "drupal-module",
+  "description": "Add card component to the Bootstrap framework with Views.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+"
+}

@@ -1,0 +1,38 @@
+{#
+/**
+ * Default theme implementation for Views to output content into cards.
+ *
+ * Available variables:
+ *
+ * @see template_preprocess_views_view_views_bootstrap_cards()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% for row in options.cards %}
+
+  <div class="row display-flex">
+
+    {% for card in row %}
+
+      <div class="{{ options.class }}">
+
+        <div class="thumbnail">
+            <img src="{{ card.image }}" alt="{{ card.alt }}">
+            <div class="caption">
+
+                <h5>{{ card.title }}</h5>
+
+                <a href="{{ card.card_link }}" class="btn btn-primary btn-block bottom" role="button">Inscrição</a>
+
+            </div>
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+{% endfor %}

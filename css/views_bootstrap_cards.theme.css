@@ -1,0 +1,9 @@
+.thumbnail .caption {
+  display: flex;
+  flex-flow: row wrap;
+  height: 200px;
+}
+
+.thumbnail .caption .bottom {
+  align-self: flex-end;
+}
