@@ -9,8 +9,6 @@ use Drupal\views_bootstrap_cards\ViewsBootstrapCards;
 
 function template_preprocess_views_view_views_bootstrap_cards(&$variables) {
 
-  global $base_url;
-
   $options = $variables['view']->style_plugin->options;
   $stylePlugin = $variables['view']->style_plugin;
   $columnSize = $options['cols'];
@@ -19,8 +17,10 @@ function template_preprocess_views_view_views_bootstrap_cards(&$variables) {
 
   $options['cards'] = [];
 
+  $aliasManager = \Drupal::service('path.alias_manager');
+
   foreach ($variables['rows'] as $id => $row) {
-    $cardLinkUrl = $base_url . '/node/' . $row['#row']->nid;
+    $cardLinkUrl = $aliasManager->getAliasByPath('/node/'.$row['#row']->nid);
     $cardLinkField = $stylePlugin->getField($id, $options['link']);
     $cardLink = isset($cardLinkField) ? $cardLinkField : $cardLinkUrl;
 
